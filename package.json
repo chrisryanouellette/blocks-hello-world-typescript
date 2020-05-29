@@ -1,21 +1,30 @@
 {
-    "name": "@airtable/hello-world-typescript-block",
-    "version": "2.0.2",
-    "description": "A typescript version of a hello world block",
-    "author": "",
-    "license": "MIT",
-    "scripts": {
-        "lint": "eslint --ext .js,.jsx,.ts,.tsx frontend"
-    },
-    "dependencies": {
-        "@airtable/blocks": "latest",
-        "react": "^16.9.0",
-        "react-dom": "^16.9.0"
-    },
-    "devDependencies": {
-        "@typescript-eslint/parser": "^2.15.0",
-        "eslint": "^6.3.0",
-        "eslint-plugin-react": "^7.14.3",
-        "eslint-plugin-react-hooks": "^2.0.1"
-    }
+	"name": "@airtable/hello-world-typescript-block",
+	"version": "2.0.2",
+	"description": "A starting point for HSN Typescript Blocks",
+	"authors": [
+		{
+			"name": "",
+			"email": ""
+		}
+	],
+	"license": "MIT",
+	"scripts": {
+		"start": "block run",
+		"release": "block release",
+		"release-local": "block release --disable-isolated-build",
+		"lint": "eslint --ext .js,.jsx,.ts,.tsx frontend"
+	},
+	"dependencies": {
+		"@airtable/blocks": "latest",
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0"
+	},
+	"devDependencies": {
+		"@typescript-eslint/parser": "^2.15.0",
+		"eslint": "^6.3.0",
+		"eslint-plugin-react": "^7.14.3",
+		"eslint-plugin-react-hooks": "^2.0.1",
+		"typescript": "^3.9.3"
+	}
 }

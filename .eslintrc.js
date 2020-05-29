@@ -21,6 +21,13 @@ module.exports = {
         'react/prop-types': 0,
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
+        'semi': ['error', 'never'],
+        'quotes': ['error', 'single'],
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "always",
+            "asyncArrow": "always"
+        }]
     },
     settings: {
         react: {
