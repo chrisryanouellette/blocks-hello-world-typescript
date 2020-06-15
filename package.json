@@ -17,6 +17,8 @@
 	},
 	"dependencies": {
 		"@airtable/blocks": "latest",
+		"@ouellettec/airtable_elements": "file:../package_airtable_elements",
+		"@ouellettec/airtable_helpers": "file:../package_airtable_helpers",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0"
 	},
