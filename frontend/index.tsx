@@ -1,6 +1,7 @@
+import { globalConfig } from '@airtable/blocks'
+import { initializeBlock, useBase } from '@airtable/blocks/ui'
 import { DefineBlock, Body, NotificationCenter, Header, Navigation, Main } from '@ouellettec/airtable_elements'
 import { Colors, Mappings, Base } from '@ouellettec/airtable_helpers'
-import { initializeBlock, useBase } from '@airtable/blocks/ui'
 import { useState } from 'react'
 import React from 'react'
 import pkg from '../package.json'
@@ -14,7 +15,7 @@ function HelloWorldBlock () {
 	const [nav, setnav] = useState(MAIN_PAGE)
 	
 	return (
-		<DefineBlock blockId={BLOCK_ID} authors={pkg.authors} version={pkg.version}>
+		<DefineBlock blockId={BLOCK_ID} authors={pkg.authors} version={pkg.version} globalConfig={globalConfig}>
 			<Body backgroundColor={Colors.merlot}>
 				<NotificationCenter>
 					<Header>SOme Header</Header>
