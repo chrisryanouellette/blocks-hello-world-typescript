@@ -4,34 +4,13 @@ const fs = require("fs")
 const path = require('path')
 const { exec } = require('child_process');
 
+const {
+    getFilesNames,
+    inverTextColor,
+    query
+} = require('./utils')
+
 const options = []
-
-function query(text, callback) {
-    process.stdin.resume()
-    console.log(text)
-    process.stdin.once("data", function (data) {
-        callback(data.toString().trim())
-    })
-}
-
-function inverTextColor(message) {
-    return '\x1b[47m\x1b[30m' + message + '\x1b[0m'
-}
-
-function getFilesNames(dir, avoid) {
-    const files = fs.readdirSync(path.join(__dirname, '../', dir))
-    let fileNames = ''
-    if(files.length) {
-        let inc = 0
-        fileNames += files.map(file => {
-            if(!avoid || !avoid.includes(file)) {
-                inc++
-                return `${inc}: ` + file.substring(0, file.indexOf('.'))
-            }
-        }).filter(file => file).join('\n')
-    }
-    return fileNames
-}
 
 function requestBase() {
     let question = '\nWhat base would you like to release to? ( default: remote )\n'
