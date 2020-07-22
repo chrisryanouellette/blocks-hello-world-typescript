@@ -16,7 +16,7 @@ function requestBase() {
     let question = '\nWhat base would you like to release to? ( default: remote )\n'
     const fileNames = getFilesNames('.block/', ['remote.json'])
     if(fileNames) {
-        question += inverTextColor('Options:\n')
+        question += inverTextColor('Options:') + '\n'
         question += fileNames + '\n'
     }
     query(question, (response) => {
@@ -52,7 +52,7 @@ function requestMappings() {
     let question = '\nWhat mappings should be used? ( default: development )\n'
     let fileNames = getFilesNames('frontend/mappings/', ['definition.json', 'development.mappings.json'])
     if(fileNames) {
-        question += inverTextColor('Options:\n')
+        question += inverTextColor('Options:') + '\n'
         question += fileNames + '\n'
     }
     query(question, (response) => {

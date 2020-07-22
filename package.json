@@ -11,9 +11,11 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "block run",
-		"release": "block release",
-		"release-local": "block release --disable-isolated-build",
-		"lint": "eslint --ext .js,.jsx,.ts,.tsx frontend"
+        "reinstall": "del package-lock.json && npm i",
+        "compare-mappings": "node ./scripts/compare_mappings.js",
+        "release": "node ./scripts/release.js",
+        "release-local": "block release --disable-isolated-build",
+        "lint": "eslint --ext .js,.jsx,.ts,.tsx frontend"
 	},
 	"dependencies": {
 		"@airtable/blocks": "latest",
