@@ -76,7 +76,7 @@ function requestMappings() {
 }
 
 function releaseBlock() {
-    const command = `block release${options[0] ? ` --remote ${options[0]}` : ''}${options[2] ? ' --disable-isolated-build' : ''}`
+    const command = `block release${options[0] && options[0] !== 'null' ? ` --remote ${options[0]}` : ''}${options[2] ? ' --disable-isolated-build' : ''}`
     console.log('EXECUTING: ', command)
     exec(command, function(error, stdout, stderr) {
         if (error) {
@@ -96,7 +96,12 @@ function runProcess() {
             requestBase()
             break
         case 1: // 
-            requestMappings()
+            if(fs.existsSync(path.join(__dirname, '../frontend/mappings'))) {
+                requestMappings()
+            } else {
+                options[1] = null
+                runProcess()
+            }
             break
         case 2:
             query('\nRun with Isolated Build? Y / N ( Default: N )\n\n', (response) => {
