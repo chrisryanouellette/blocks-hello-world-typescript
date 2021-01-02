@@ -10,6 +10,7 @@
 	],
 	"license": "MIT",
 	"scripts": {
+		"add-block": "node ./scripts/add_block.js",
 		"start": "block run",
 		"reinstall": "del package-lock.json && npm i",
 		"compare-mappings": "node ./scripts/compare_mappings.js",
