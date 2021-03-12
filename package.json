@@ -13,15 +13,13 @@
 		"add-block": "node ./scripts/add_block.js",
 		"start": "block run",
 		"reinstall": "del package-lock.json && npm i",
-		"compare-mappings": "node ./scripts/compare_mappings.js",
 		"release": "node ./scripts/release.js",
-		"release-local": "block release --disable-isolated-build",
+		"release-local": "block release",
 		"lint": "eslint --ext .js,.jsx,.ts,.tsx frontend"
 	},
 	"dependencies": {
 		"@airtable/blocks": "latest",
-		"@ouellettec/airtable_elements": "file:../package_airtable_elements",
-		"@ouellettec/airtable_helpers": "file:../package_airtable_helpers",
+		"@ouellettec/airtable_helpers": "git+https://github.com/chrisryanouellette/Airtable_Automation_Helpers",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0"
 	},

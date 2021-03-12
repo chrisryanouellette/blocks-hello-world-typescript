@@ -50,7 +50,7 @@ function checkMappings() {
 }
 function requestMappings() {
     let question = '\nWhat mappings should be used? ( default: development )\n'
-    let fileNames = getFilesNames('frontend/mappings/', ['definition.json', 'development.mappings.json'])
+    let fileNames = getFilesNames('frontend/mappings/', ['development.mappings.json'])
     if(fileNames) {
         question += inverTextColor('Options:') + '\n'
         question += fileNames + '\n'

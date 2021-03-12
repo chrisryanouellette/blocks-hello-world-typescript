@@ -14,7 +14,6 @@ module.exports.query = function(text, callback) {
 }
 
 module.exports.getFilesNames = function(dir, avoid) {
-    
     const files = fs.readdirSync(path.join(__dirname, '../', dir))
     let fileNames = ''
     if(files.length) {
